@@ -16,6 +16,8 @@ Practice.start = function(form, input) {
     form.addEventListener("submit", function() {
       if (input.value.toUpperCase() === this.info[this.index].value.toUpperCase()) {
         Practice.correct();
+        this.el.innerHTML = this.info[this.index].value;
+        window.setTimeout(function() {}, 1000);
       } else {
         Practice.incorrect();
       }
