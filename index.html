@@ -6,9 +6,24 @@
   </head>
   <body>
     <div id="card"></div>
+    <form id="form">
+      <input id="input">
+    </form>
   </body>
   <script src="index.js"></script>
   <script>
-    
+    Practice.add(document.getElementById("card"),
+      [
+        {
+          key: "Type 'k'",
+          value: "k"
+        },
+        {
+          key: "Type 'c'",
+          value: "c"
+        }
+      ]
+    );
+    Practice.start(document.getElementById("form"), document.getElementById("input"));
   </script>
 </html>
