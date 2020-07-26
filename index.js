@@ -13,7 +13,8 @@ Practice.start = function(form, input) {
   while (this.start == true) {
     this.index = Math.floor(Math.random()*this.info.length);
     this.el.innerHTML = this.info[this.index].key;
-    form.addEventListener("submit", function() {
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
       if (input.value.toUpperCase() === this.info[this.index].value.toUpperCase()) {
         Practice.correct();
         this.el.innerHTML = this.info[this.index].value;
